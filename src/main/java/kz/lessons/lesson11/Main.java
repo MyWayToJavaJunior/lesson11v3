@@ -1,5 +1,7 @@
 package kz.lessons.lesson11;
 
+import com.sun.org.apache.xpath.internal.SourceTree;
+
 import java.util.Arrays;
 import java.util.HashSet;
 
@@ -81,6 +83,16 @@ public class Main {
         System.out.println("10     : " + usersHSEQHC.toString());
         System.out.println("11     : " + anotherUsersHSEQHC.toString());
         System.out.println("12(obj): " + objHSEQHC.toString());
+
+        System.out.println("---------------------- Another types ----------------------");
+
+        Pet[] pets = new Pet[10];
+        for (int i = 0; i < pets.length; i++) {
+            if (i < 5) pets[i] = new Cat(USERS[i], AGES[i]);
+            else pets[i] = new Dog(USERS[i - 5], AGES[i - 5]);
+        }
+        HashSet<Pet> petsHS = new HashSet<>(Arrays.asList(pets));
+        System.out.println("13     : " + petsHS.toString());
     }
 
 }
