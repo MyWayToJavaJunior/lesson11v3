@@ -13,21 +13,6 @@ public class AnotherUser {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (!(obj instanceof AnotherUser)) return false;
-        AnotherUser entry = (AnotherUser) obj;
-        return name.equals(entry.name) && age == entry.age;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 37;
-        hash = hash * 17 + name.hashCode();
-        hash = hash * 17 + age;
-        return hash;
-    }
-
-    @Override
     public String toString() {
         return "[ " + name + " : " + age +" ]";
     }
